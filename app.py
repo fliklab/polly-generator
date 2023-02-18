@@ -13,6 +13,9 @@ def index():
                 html_files.append(filename)
     return render_template('index.html', html_files=html_files)
 
+@app.route('/<html_file>')
+def serve_html(html_file):
+    return render_template(html_file)
+
 if __name__ == '__main__':
     app.run()
-
