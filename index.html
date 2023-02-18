@@ -1,10 +1,22 @@
+<!DOCTYPE html>
 <html>
-<head>
-<title>Index of HTML files</title>
-</head>
-<body>
-<ul>
-<li><a href="./흥부와놀부Short.html">./흥부와놀부Short.html</a></li>
-</ul>
-</body>
+  <head>
+    <title>Index of HTML files</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Index of HTML files</h1>
+      <ul class="list-group">
+        {% for html_file in html_files %}
+        <li class="list-group-item">
+          <a href="{{ html_file }}">{{ html_file.replace('./', '') }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </body>
 </html>
