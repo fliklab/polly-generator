@@ -12,7 +12,7 @@ for dirpath, dirnames, filenames in os.walk('.'):
 # create the index file
 with open('index.html', 'w') as index_file:
     # write the HTML header
-    index_file.write('<html>\n<head>\n<title>Index of HTML files</title>\n</head>\n<body>\n')
+    index_file.write('<html>\n<head>\n<title>전래동화</title>\n</head>\n<body>\n')
     # write the list of HTML files
     index_file.write('<ul>\n')
     for html_file in html_files:
